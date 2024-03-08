@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>vue-ami-ui组件库1 | 洛天宫</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="vue-ami-ui组件库1 | 洛天宫">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="categories">
+<meta property="og:url" content="http://example.com/categories/index.html">
+<meta property="og:site_name" content="洛天宫">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-03-06T17:32:03.000Z">
+<meta property="article:modified_time" content="2024-03-08T03:12:34.218Z">
+<meta property="article:author" content="乔丶">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-dark.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 7.1.1"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>乔丶</span>
+</div>
+
+<div class="icon">
+    
+        
+    
+        
+            <a title="github"
+               href="https://github.com/sunxingzhe0"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a title="email"
+               href="mailto:slxnl@outlook.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=969470539&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="All">All
+            
+                <small>(2)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="前端">
+            
+            前端
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="生活记录">
+            
+            生活记录
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+    </div>
+    <div>
+        
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="2">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="All 生活记录 "
+           href="/2024/03/08/2024NEW/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="2024新的篇章12">2024新的篇章12</span>
+            <span class="post-date" title="2024-03-08 03:12:34">2024/03/08</span>
+        </a>
+        
+        
+        <a  class="All 前端 "
+           href="/2024/03/06/AmiUI%E7%BB%84%E4%BB%B6%E5%BA%93/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="vue-ami-ui组件库1">vue-ami-ui组件库1</span>
+            <span class="post-date" title="2024-03-06 10:05:46">2024/03/06</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-AmiUI组件库" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">vue-ami-ui组件库1</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="前端">前端</a>
+            
+        </span>
+        
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2024-03-08 03:12:34'>2024-03-06 10:05</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E-vue-ami-ui"><span class="toc-text">关于 vue-ami-ui</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E5%BC%8F"><span class="toc-text">安装方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="toc-text">使用方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC%E7%BB%84%E4%BB%B6"><span class="toc-text">表格组件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F-1"><span class="toc-text">使用方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E6%95%B0"><span class="toc-text">参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95"><span class="toc-text">方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E9%80%BB%E8%BE%91"><span class="toc-text">使用逻辑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%81%E8%A3%85%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="toc-text">封装的功能</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AmiForm%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6"><span class="toc-text">AmiForm表单组件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F-2"><span class="toc-text">使用方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E6%95%B0-1"><span class="toc-text">参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95-1"><span class="toc-text">方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E9%80%BB%E8%BE%91-1"><span class="toc-text">使用逻辑</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BnoticeBar%E6%BB%9A%E5%8A%A8%E9%80%9A%E7%9F%A5%E6%A0%8F%E7%BB%84%E4%BB%B6"><span class="toc-text">BnoticeBar滚动通知栏组件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F-3"><span class="toc-text">使用方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E6%95%B0-2"><span class="toc-text">参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95-2"><span class="toc-text">方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E7%9A%84%E9%80%BB%E8%BE%91"><span class="toc-text">使用的逻辑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%81%E8%A3%85%E7%9A%84%E5%8A%9F%E8%83%BD-1"><span class="toc-text">封装的功能</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#utils%E6%96%B9%E6%B3%95"><span class="toc-text">utils方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F-4"><span class="toc-text">使用方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E5%88%97%E8%A1%A8"><span class="toc-text">方法列表</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="关于-vue-ami-ui"><a href="#关于-vue-ami-ui" class="headerlink" title="关于 vue-ami-ui"></a>关于 vue-ami-ui</h2><p>该组件库由 vue3+element-plus+vite 构建，安装即可使用。目前集成了Table、TableFilter、AmiForm、NoticeBar、utils。基本上所有管理系统都会用到表格和表单，而Ui库并不能满足我们日常的业务需求。所以重点针对表格、表单进行了二次封装，以数据配置的方式自定义生成我们想要的结果。utils为部分常用的工具函数。详细配置请阅读后面的文档。组件库刚开始发布，可能还存在问题和不完善，后面我会定期维护。。</p>
+<h2 id="安装方式"><a href="#安装方式" class="headerlink" title="安装方式"></a>安装方式</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">npm i vue-ami-ui</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">npm install vue-ami-ui</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">yarn add vue-ami-ui</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><p><strong>全局</strong></p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createApp &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">App</span> <span class="keyword">from</span> <span class="string">&#x27;./App.vue&#x27;</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> <span class="title class_">VueAmiUI</span> <span class="keyword">from</span> <span class="string">&#x27;vue-ami-ui&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;vue-ami-ui/css&#x27;</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">const</span> app = <span class="title function_">createApp</span>(<span class="title class_">App</span>)</span><br><span class="line">app.<span class="title function_">use</span>(<span class="title class_">VueAmiUI</span>)</span><br></pre></td></tr></table></figure>
+<p><strong>按需引入</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup lang=&quot;ts&quot;&gt;</span><br><span class="line">import &#123; Table &#125; from &#x27;vue-ami-ui&#x27;</span><br><span class="line">import &#x27;vue-ami-ui/css&#x27;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h2 id="表格组件"><a href="#表格组件" class="headerlink" title="表格组件"></a>表格组件</h2><h3 id="使用方式-1"><a href="#使用方式-1" class="headerlink" title="使用方式"></a>使用方式</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;page-list&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Table</span></span></span><br><span class="line"><span class="tag">      <span class="attr">ref</span>=<span class="string">&quot;tableRef&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">v-bind</span>=<span class="string">&quot;tableParams&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">class</span>=<span class="string">&quot;table-list&quot;</span></span></span><br><span class="line"><span class="tag">      @<span class="attr">search</span>=<span class="string">&quot;tableSearch&quot;</span></span></span><br><span class="line"><span class="tag">      @<span class="attr">sortHeader</span>=<span class="string">&quot;onSortHeader&quot;</span></span></span><br><span class="line"><span class="tag">    &gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">template</span> #<span class="attr">address</span>=<span class="string">&quot;&#123; row &#125;&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span> <span class="attr">link</span>&gt;</span> 编辑 <span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">template</span> #<span class="attr">fixed</span>=<span class="string">&quot;&#123; row &#125;&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span> <span class="attr">link</span>&gt;</span> 编辑 <span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;danger&quot;</span> <span class="attr">link</span>&gt;</span> 删除 <span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Table</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">setup</span> <span class="attr">lang</span>=<span class="string">&quot;ts&quot;</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">import</span> type &#123; <span class="title class_">ElTable</span> &#125; <span class="keyword">from</span> <span class="string">&quot;element-plus&quot;</span>;</span></span><br><span class="line"><span class="language-javascript"><span class="keyword">import</span> type &#123; <span class="title class_">TableListState</span>, <span class="title class_">TableHeaderType</span> &#125; <span class="keyword">from</span> <span class="string">&quot;vue-ami-ui&quot;</span>;</span></span><br><span class="line"><span class="language-javascript"><span class="keyword">import</span> &#123; reactive, ref, onMounted &#125; <span class="keyword">from</span> <span class="string">&quot;vue&quot;</span>;</span></span><br><span class="line"><span class="language-javascript"><span class="title function_">defineOptions</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="attr">name</span>: <span class="string">&quot;列表&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">&#125;);</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="comment">// 定义变量内容</span></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">const</span> tableRef = ref&lt;<span class="title class_">InstanceType</span>&lt;<span class="keyword">typeof</span> <span class="title class_">ElTable</span>&gt;&gt;();</span></span><br><span class="line"><span class="language-javascript"><span class="keyword">const</span> tableParams = reactive&lt;<span class="title class_">TableListState</span>&gt;(&#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="comment">// 列表数据（必传）</span></span></span><br><span class="line"><span class="language-javascript">  <span class="attr">data</span>: [],</span></span><br><span class="line"><span class="language-javascript">  <span class="comment">// 表头内容（必传，注意格式）</span></span></span><br><span class="line"><span class="language-javascript">  <span class="attr">header</span>: [</span></span><br><span class="line"><span class="language-javascript">    &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">key</span>: <span class="string">&quot;address&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">colWidth</span>: <span class="string">&quot;&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">title</span>: <span class="string">&quot;详细地址&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">type</span>: <span class="string">&quot;text&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">isCheck</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">    &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">key</span>: <span class="string">&quot;phone&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">colWidth</span>: <span class="string">&quot;&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">title</span>: <span class="string">&quot;联系电话&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">type</span>: <span class="string">&quot;text&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">isCheck</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">    &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">key</span>: <span class="string">&quot;time&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">colWidth</span>: <span class="string">&quot;&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">title</span>: <span class="string">&quot;开放时间&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">type</span>: <span class="string">&quot;text&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">isCheck</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">render</span>: <span class="function">(<span class="params">item: any, _index: number</span>) =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">return</span> item.<span class="property">time</span>;</span></span><br><span class="line"><span class="language-javascript">      &#125;,</span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">    &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">key</span>: <span class="string">&quot;isSupport&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">colWidth</span>: <span class="string">&quot;&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">title</span>: <span class="string">&quot;是否使用&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">type</span>: <span class="string">&quot;text&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">isCheck</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">    &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">key</span>: <span class="string">&quot;image&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">colWidth</span>: <span class="string">&quot;&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">width</span>: <span class="string">&quot;40&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">height</span>: <span class="string">&quot;20&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">title</span>: <span class="string">&quot;图片描述&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">type</span>: <span class="string">&quot;image&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">isCheck</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">  ],</span></span><br><span class="line"><span class="language-javascript">  <span class="comment">// 配置项（必传）</span></span></span><br><span class="line"><span class="language-javascript">  <span class="attr">config</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">title</span>: <span class="string">&quot;&quot;</span>, <span class="comment">//表格标题</span></span></span><br><span class="line"><span class="language-javascript">    <span class="attr">printName</span>: <span class="string">&quot;&quot;</span>, <span class="comment">//打印标题</span></span></span><br><span class="line"><span class="language-javascript">    <span class="attr">total</span>: <span class="number">0</span>, <span class="comment">// 列表总数</span></span></span><br><span class="line"><span class="language-javascript">    <span class="attr">loading</span>: <span class="literal">false</span>, <span class="comment">// loading 加载</span></span></span><br><span class="line"><span class="language-javascript">    <span class="attr">isLine</span>: <span class="literal">false</span>, <span class="comment">// 是否显示搜索条件下方隔断线条</span></span></span><br><span class="line"><span class="language-javascript">    <span class="attr">isBorder</span>: <span class="literal">true</span>, <span class="comment">// 是否显示表格边框</span></span></span><br><span class="line"><span class="language-javascript">    <span class="attr">isSerialNo</span>: <span class="literal">true</span>, <span class="comment">// 是否显示表格序号</span></span></span><br><span class="line"><span class="language-javascript">    <span class="attr">isSelection</span>: <span class="literal">true</span>, <span class="comment">// 是否显示表格多选</span></span></span><br><span class="line"><span class="language-javascript">    <span class="attr">isOperate</span>: <span class="literal">true</span>, <span class="comment">// 是否显示表格操作栏</span></span></span><br><span class="line"><span class="language-javascript">    <span class="attr">isUtils</span>: <span class="literal">false</span>, <span class="comment">//是否显示底部工具栏</span></span></span><br><span class="line"><span class="language-javascript">  &#125;,</span></span><br><span class="line"><span class="language-javascript">  <span class="comment">// 搜索表单，动态生成（传空数组时，将不显示搜索，注意格式）</span></span></span><br><span class="line"><span class="language-javascript">  <span class="attr">search</span>: [</span></span><br><span class="line"><span class="language-javascript">    &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">label</span>: <span class="string">&quot;开放时间&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">keys</span>: [<span class="string">&quot;startTime&quot;</span>, <span class="string">&quot;endTime&quot;</span>],</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">placeholder</span>: <span class="string">&quot;请选择&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">required</span>: <span class="literal">false</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">type</span>: <span class="string">&quot;el-date-picker&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">default</span>: [<span class="string">&quot;2023-05-05 00:00:00&quot;</span>, <span class="string">&quot;2023-05-05 23:59:59&quot;</span>],</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">attrs</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">type</span>: <span class="string">&quot;daterange&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">valueFormat</span>: <span class="string">&quot;YYYY-MM-DD HH:mm:ss&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      &#125;,</span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">    &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">label</span>: <span class="string">&quot;商品名称&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">key</span>: <span class="string">&quot;name&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">placeholder</span>: <span class="string">&quot;请输入&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">required</span>: <span class="literal">false</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">type</span>: <span class="string">&quot;el-input&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">    &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">label</span>: <span class="string">&quot;详细地址&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">key</span>: <span class="string">&quot;address&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">placeholder</span>: <span class="string">&quot;请输入详细地址&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">required</span>: <span class="literal">false</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">type</span>: <span class="string">&quot;el-input&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">    &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">label</span>: <span class="string">&quot;联系电话&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">key</span>: <span class="string">&quot;phone&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">placeholder</span>: <span class="string">&quot;请输入采样点联系电话&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">required</span>: <span class="literal">false</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">type</span>: <span class="string">&quot;el-input&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">    &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">label</span>: <span class="string">&quot;联系电话2&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">key</span>: <span class="string">&quot;phone2&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">placeholder</span>: <span class="string">&quot;请输入电话&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">required</span>: <span class="literal">false</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">type</span>: <span class="string">&quot;el-input&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">    &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">label</span>: <span class="string">&quot;是否使用&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">key</span>: <span class="string">&quot;isSupport&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">placeholder</span>: <span class="string">&quot;请选择&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">required</span>: <span class="literal">false</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">type</span>: <span class="string">&quot;el-select&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">options</span>: [</span></span><br><span class="line"><span class="language-javascript">        &#123; <span class="attr">label</span>: <span class="string">&quot;是&quot;</span>, <span class="attr">value</span>: <span class="number">1</span> &#125;,</span></span><br><span class="line"><span class="language-javascript">        &#123; <span class="attr">label</span>: <span class="string">&quot;否&quot;</span>, <span class="attr">value</span>: <span class="number">0</span> &#125;,</span></span><br><span class="line"><span class="language-javascript">      ],</span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">  ],</span></span><br><span class="line"><span class="language-javascript">  <span class="comment">// 搜索参数（搜索条件初始值，`getTableData` 中使用）</span></span></span><br><span class="line"><span class="language-javascript">  <span class="attr">params</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">pageNum</span>: <span class="number">1</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">pageSize</span>: <span class="number">10</span>,</span></span><br><span class="line"><span class="language-javascript">  &#125;,</span></span><br><span class="line"><span class="language-javascript">&#125;);</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="comment">// 初始化列表数据</span></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">const</span> <span class="title function_">getTableData</span> = (<span class="params"></span>) =&gt; &#123;</span></span><br><span class="line"><span class="language-javascript">  tableParams.<span class="property">config</span>.<span class="property">loading</span> = <span class="literal">true</span>;</span></span><br><span class="line"><span class="language-javascript">  tableParams.<span class="property">data</span> = [];</span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">20</span>; i++) &#123;</span></span><br><span class="line"><span class="language-javascript">    tableParams.<span class="property">data</span>.<span class="title function_">push</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">id</span>: <span class="string">`123456789<span class="subst">$&#123;i + <span class="number">1</span>&#125;</span>`</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">name</span>: <span class="string">`桃园广场<span class="subst">$&#123;i + <span class="number">1</span>&#125;</span>`</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">address</span>: <span class="string">`中柏居下<span class="subst">$&#123;i + <span class="number">1</span>&#125;</span>`</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">phone</span>: <span class="string">`0592-6081259<span class="subst">$&#123;i + <span class="number">1</span>&#125;</span>`</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">time</span>: <span class="string">`6:00 ~ 24:00`</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">isSupport</span>: <span class="string">`<span class="subst">$&#123;i % <span class="number">2</span> === <span class="number">0</span> ? <span class="string">&quot;是&quot;</span> : <span class="string">&quot;否&quot;</span>&#125;</span>`</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">image</span>: <span class="string">`https://img2.baidu.com/it/u=417454395,2713356475&amp;fm=253&amp;fmt=auto?w=200&amp;h=200`</span>,</span></span><br><span class="line"><span class="language-javascript">    &#125;);</span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript">  <span class="comment">// 数据总数（模拟，真实从接口取）</span></span></span><br><span class="line"><span class="language-javascript">  tableParams.<span class="property">config</span>.<span class="property">total</span> = tableParams.<span class="property">data</span>.<span class="property">length</span>;</span></span><br><span class="line"><span class="language-javascript">  <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">    tableParams.<span class="property">config</span>.<span class="property">loading</span> = <span class="literal">false</span>;</span></span><br><span class="line"><span class="language-javascript">  &#125;, <span class="number">500</span>);</span></span><br><span class="line"><span class="language-javascript">&#125;;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="comment">// 分页改变时回调</span></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">const</span> <span class="title function_">tableSearch</span> = (<span class="params">params: any</span>) =&gt; &#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="variable language_">console</span>.<span class="title function_">log</span>(params, <span class="string">&quot;params===&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">  tableParams.<span class="property">params</span> = params;</span></span><br><span class="line"><span class="language-javascript">  <span class="title function_">getTableData</span>();</span></span><br><span class="line"><span class="language-javascript">&#125;;</span></span><br><span class="line"><span class="language-javascript"><span class="comment">// 拖动显示列排序回调</span></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">const</span> <span class="title function_">onSortHeader</span> = (<span class="params">data: TableHeaderType[]</span>) =&gt; &#123;</span></span><br><span class="line"><span class="language-javascript">  tableParams.<span class="property">header</span> = data;</span></span><br><span class="line"><span class="language-javascript">&#125;;</span></span><br><span class="line"><span class="language-javascript"><span class="comment">// 页面加载时</span></span></span><br><span class="line"><span class="language-javascript"><span class="title function_">onMounted</span>(<span class="function">() =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="title function_">getTableData</span>();</span></span><br><span class="line"><span class="language-javascript">&#125;);</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span> <span class="attr">lang</span>=<span class="string">&quot;scss&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><ul>
+<li>tableParams：表格数据对象，包含 data、header、config、search、param 和 printName 属性。其中，</li>
+<li>data：表格中显示的数据数组；</li>
+<li>header：表格列头信息数组，包含 key、colWidth、title、type 和 isCheck 等属性；</li>
+<li>config：表格配置信息，包含title（表格标题）、printName(打印标题)、 total(总数量)、loading（loading状态）、isBorder（是否显示表格边框）、  isSerialNo（是否显示表格序号）、isSelection（是否显示多选框） 和 isOperate（是否显示操作栏）、isUtils(是否显示工具栏) 等属性；</li>
+<li>search：搜索参数数组，搜索表单数组，包含每个搜索项的 label、prop、placeholder、required 和 type 等信息；</li>
+<li>param：请求后台时传递的参数；</li>
+</ul>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>1.<code>search</code>：筛选条件更改（可选）<br>2. <code>sortHeader</code>：用于拖拽表头排序后触发的方法(可选)</p>
+<h3 id="使用逻辑"><a href="#使用逻辑" class="headerlink" title="使用逻辑"></a>使用逻辑</h3><p>这是一个基于 Vue.js 的表格组件，包括搜索功能、分页功能、表头排序功能和列选择功能等。使用者可以根据需要配置表格的列数据和搜索表单数据，通过异步请求数据来填充表格。具体使用逻辑如下：</p>
+<ol>
+<li>引入 Table 组件</li>
+<li>定义变量，包括表格数据、搜索表单数据等</li>
+<li>定义初始化列表数据的方法 <code>getTableData</code></li>
+<li>定义搜索回调函数 <code>onSearch</code>，在用户点击搜索按钮时更新搜索参数并调用 <code>getTableData</code></li>
+<li>定义表头排序回调函数 <code>onSortHeader</code>，在用户拖动表头排序时更新表头数据</li>
+<li>在页面加载时调用 <code>getTableData</code> 方法初始化列表数据</li>
+<li>在模板中使用 <code>Table</code> 组件并绑定相应事件和数据。</li>
+</ol>
+<h3 id="封装的功能"><a href="#封装的功能" class="headerlink" title="封装的功能"></a>封装的功能</h3><ol>
+<li>表格内容和表头的传入功能</li>
+<li>表格的配置项传入功能</li>
+<li>可以设置是否显示边框</li>
+<li>可以设置表格行是否为斑马条纹样式</li>
+<li>可以设置是否显示多选框</li>
+<li>可以设置是否显示序号列</li>
+<li>可以设置表格列宽度和表头的显示标题</li>
+<li>可以在单元格中显示图片或文字</li>
+<li>可以设置是否显示操作列和操作按钮</li>
+<li>可以进行分页查询并通过事件向父组件传递分页的参数</li>
+<li>可以自定义打印表格内容</li>
+<li>可以导出表格内容到 Excel 文件</li>
+<li>可以刷新表格数据</li>
+<li>可以设置表格的显示列并实现拖拽排序</li>
+<li>可以在前端实现排序，并通过事件将排序后的表头信息向父组件传递</li>
+</ol>
+<hr>
+<h2 id="AmiForm表单组件"><a href="#AmiForm表单组件" class="headerlink" title="AmiForm表单组件"></a>AmiForm表单组件</h2><h3 id="使用方式-2"><a href="#使用方式-2" class="headerlink" title="使用方式"></a>使用方式</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;width: 1000px; margin-top: 20px&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">AmiForm</span></span></span><br><span class="line"><span class="tag">      <span class="attr">ref</span>=<span class="string">&quot;form&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">label-width</span>=<span class="string">&quot;100px&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">:options</span>=<span class="string">&quot;options&quot;</span></span></span><br><span class="line"><span class="tag">      @<span class="attr">on-change</span>=<span class="string">&quot;handleChange&quot;</span></span></span><br><span class="line"><span class="tag">      @<span class="attr">before-upload</span>=<span class="string">&quot;handleBeforeUpload&quot;</span></span></span><br><span class="line"><span class="tag">      @<span class="attr">on-preview</span>=<span class="string">&quot;handlePreview&quot;</span></span></span><br><span class="line"><span class="tag">      @<span class="attr">on-remove</span>=<span class="string">&quot;handleRemove&quot;</span></span></span><br><span class="line"><span class="tag">      @<span class="attr">before-remove</span>=<span class="string">&quot;beforeRemove&quot;</span></span></span><br><span class="line"><span class="tag">      @<span class="attr">on-success</span>=<span class="string">&quot;handleSuccess&quot;</span></span></span><br><span class="line"><span class="tag">      @<span class="attr">on-exceed</span>=<span class="string">&quot;handleExceed&quot;</span></span></span><br><span class="line"><span class="tag">    &gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">template</span> #<span class="attr">uploadArea</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span> <span class="attr">size</span>=<span class="string">&quot;small&quot;</span>&gt;</span>点击上传<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">template</span> #<span class="attr">uploadTip</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;color: #ccc; font-size: 12px&quot;</span>&gt;</span>大小不超过500KB的jpg/png文件。<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">template</span> #<span class="attr">action</span>=<span class="string">&quot;scope&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;submitForm(scope as Scope)&quot;</span>&gt;</span>提 交<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">el-button</span> @<span class="attr">click</span>=<span class="string">&quot;resetForm&quot;</span>&gt;</span>重 置<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">AmiForm</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">lang</span>=<span class="string">&quot;ts&quot;</span> <span class="attr">setup</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">import</span> type &#123; <span class="title class_">FormOptions</span>, <span class="title class_">FormInstance</span>  &#125; <span class="keyword">from</span> <span class="string">&quot;vue-ami-ui&quot;</span>;</span></span><br><span class="line"><span class="language-javascript"><span class="keyword">import</span> &#123; <span class="title class_">ElMessage</span>, <span class="title class_">ElMessageBox</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;element-plus&#x27;</span></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">import</span> &#123; ref &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">let</span> form = <span class="title function_">ref</span>()</span></span><br><span class="line"><span class="language-javascript">interface <span class="title class_">Scope</span> &#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="attr">form</span>: <span class="title class_">FormInstance</span></span></span><br><span class="line"><span class="language-javascript">  <span class="attr">model</span>: any</span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">let</span> <span class="attr">options</span>: <span class="title class_">FormOptions</span>[] = [</span></span><br><span class="line"><span class="language-javascript">  &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">type</span>: <span class="string">&#x27;input&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">value</span>: <span class="string">&#x27;&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">label</span>: <span class="string">&#x27;用户名&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">prop</span>: <span class="string">&#x27;username&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">placeholder</span>: <span class="string">&#x27;请输入用户名&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">rules</span>: [</span></span><br><span class="line"><span class="language-javascript">      &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">required</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">message</span>: <span class="string">&#x27;用户名不能为空&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">trigger</span>: <span class="string">&#x27;blur&#x27;</span></span></span><br><span class="line"><span class="language-javascript">      &#125;,</span></span><br><span class="line"><span class="language-javascript">      &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">min</span>: <span class="number">2</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">max</span>: <span class="number">6</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">message</span>: <span class="string">&#x27;用户名在2-6位置之间&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">trigger</span>: <span class="string">&#x27;blur&#x27;</span></span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    ],</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">attrs</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">clearable</span>: <span class="literal">true</span></span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">on</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">change</span>: <span class="function">(<span class="params">e: any</span>) =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">console</span>.<span class="title function_">log</span>(e)</span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;,</span></span><br><span class="line"><span class="language-javascript">  &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">type</span>: <span class="string">&#x27;input&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">value</span>: <span class="string">&#x27;&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">label</span>: <span class="string">&#x27;密码&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">prop</span>: <span class="string">&#x27;password&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">placeholder</span>: <span class="string">&#x27;请输入密码&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">rules</span>: [</span></span><br><span class="line"><span class="language-javascript">      &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">required</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">message</span>: <span class="string">&#x27;密码不能为空&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">trigger</span>: <span class="string">&#x27;blur&#x27;</span></span></span><br><span class="line"><span class="language-javascript">      &#125;,</span></span><br><span class="line"><span class="language-javascript">      &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">min</span>: <span class="number">6</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">max</span>: <span class="number">10</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">message</span>: <span class="string">&#x27;密码长度6-10位置之间&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">trigger</span>: <span class="string">&#x27;blur&#x27;</span></span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    ],</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">attrs</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">showPassword</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">clearable</span>: <span class="literal">true</span></span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;,</span></span><br><span class="line"><span class="language-javascript">  &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">type</span>: <span class="string">&#x27;select&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">value</span>: <span class="string">&#x27;&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">placeholder</span>: <span class="string">&#x27;请选择职位&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">prop</span>: <span class="string">&#x27;role&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">label</span>: <span class="string">&#x27;职位&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">attrs</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">style</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">width</span>: <span class="string">&#x27;100%&#x27;</span></span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">rules</span>: [</span></span><br><span class="line"><span class="language-javascript">      &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">required</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">message</span>: <span class="string">&#x27;职位不能为空&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">trigger</span>: <span class="string">&#x27;blur&#x27;</span></span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    ],</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">children</span>: [</span></span><br><span class="line"><span class="language-javascript">      &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">type</span>: <span class="string">&#x27;option&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">label</span>: <span class="string">&#x27;经理&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">value</span>: <span class="string">&#x27;1&#x27;</span></span></span><br><span class="line"><span class="language-javascript">      &#125;,</span></span><br><span class="line"><span class="language-javascript">      &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">type</span>: <span class="string">&#x27;option&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">label</span>: <span class="string">&#x27;主管&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">value</span>: <span class="string">&#x27;2&#x27;</span></span></span><br><span class="line"><span class="language-javascript">      &#125;,</span></span><br><span class="line"><span class="language-javascript">      &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">type</span>: <span class="string">&#x27;option&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">label</span>: <span class="string">&#x27;销售&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">value</span>: <span class="string">&#x27;3&#x27;</span></span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    ]</span></span><br><span class="line"><span class="language-javascript">  &#125;,</span></span><br><span class="line"><span class="language-javascript">  &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">type</span>: <span class="string">&#x27;checkbox-group&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">value</span>: [<span class="string">&#x27;足球&#x27;</span>],</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">prop</span>: <span class="string">&#x27;like&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">label</span>: <span class="string">&#x27;爱好&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">rules</span>: [</span></span><br><span class="line"><span class="language-javascript">      &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">required</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">message</span>: <span class="string">&#x27;爱好不能为空&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">trigger</span>: <span class="string">&#x27;blur&#x27;</span></span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    ],</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">children</span>: [</span></span><br><span class="line"><span class="language-javascript">      &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">type</span>: <span class="string">&#x27;checkbox&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">label</span>: <span class="string">&#x27;足球&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">value</span>: <span class="string">&#x27;1&#x27;</span></span></span><br><span class="line"><span class="language-javascript">      &#125;,</span></span><br><span class="line"><span class="language-javascript">      &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">type</span>: <span class="string">&#x27;checkbox&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">label</span>: <span class="string">&#x27;篮球&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">value</span>: <span class="string">&#x27;2&#x27;</span></span></span><br><span class="line"><span class="language-javascript">      &#125;,</span></span><br><span class="line"><span class="language-javascript">      &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">type</span>: <span class="string">&#x27;checkbox&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">label</span>: <span class="string">&#x27;排球&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">value</span>: <span class="string">&#x27;3&#x27;</span></span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    ]</span></span><br><span class="line"><span class="language-javascript">  &#125;,</span></span><br><span class="line"><span class="language-javascript">  &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">type</span>: <span class="string">&#x27;radio-group&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">value</span>: <span class="string">&#x27;男&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">prop</span>: <span class="string">&#x27;gender&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">label</span>: <span class="string">&#x27;性别&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">rules</span>: [</span></span><br><span class="line"><span class="language-javascript">      &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">required</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">message</span>: <span class="string">&#x27;性别不能为空&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">trigger</span>: <span class="string">&#x27;blur&#x27;</span></span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    ],</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">children</span>: [</span></span><br><span class="line"><span class="language-javascript">      &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">type</span>: <span class="string">&#x27;radio&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">label</span>: <span class="string">&#x27;男&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">value</span>: <span class="string">&#x27;1&#x27;</span></span></span><br><span class="line"><span class="language-javascript">      &#125;,</span></span><br><span class="line"><span class="language-javascript">      &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">type</span>: <span class="string">&#x27;radio&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">label</span>: <span class="string">&#x27;女&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">value</span>: <span class="string">&#x27;2&#x27;</span></span></span><br><span class="line"><span class="language-javascript">      &#125;,</span></span><br><span class="line"><span class="language-javascript">      &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">type</span>: <span class="string">&#x27;radio&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">label</span>: <span class="string">&#x27;保密&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">value</span>: <span class="string">&#x27;3&#x27;</span></span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    ]</span></span><br><span class="line"><span class="language-javascript">  &#125;,</span></span><br><span class="line"><span class="language-javascript">  &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">type</span>: <span class="string">&#x27;upload&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">label</span>: <span class="string">&#x27;上传&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">prop</span>: <span class="string">&#x27;pic&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">uploadAttrs</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">action</span>: <span class="string">&#x27;https://jsonplaceholder.typicode.com/posts/&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">multiple</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">limit</span>: <span class="number">3</span></span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">rules</span>: [</span></span><br><span class="line"><span class="language-javascript">      &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">required</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">message</span>: <span class="string">&#x27;请上传文件&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">trigger</span>: <span class="string">&#x27;blur&#x27;</span></span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    ]</span></span><br><span class="line"><span class="language-javascript">  &#125;,</span></span><br><span class="line"><span class="language-javascript">  &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">type</span>: <span class="string">&#x27;editor&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">value</span>: <span class="string">&#x27;&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">prop</span>: <span class="string">&#x27;desc&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">placeholder</span>: <span class="string">&#x27;请输入内容hh&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">label</span>: <span class="string">&#x27;描述&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">rules</span>: [</span></span><br><span class="line"><span class="language-javascript">      &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">required</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">message</span>: <span class="string">&#x27;描述不能为空&#x27;</span></span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    ]</span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript">]</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">let</span> <span class="title function_">submitForm</span> = (<span class="params">scope: Scope</span>) =&gt; &#123;</span></span><br><span class="line"><span class="language-javascript">  scope.<span class="property">form</span>.<span class="title function_">validate</span>(<span class="function">(<span class="params">valid</span>) =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">if</span> (valid) &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="variable language_">console</span>.<span class="title function_">log</span>(scope.<span class="property">model</span>)</span></span><br><span class="line"><span class="language-javascript">      <span class="title class_">ElMessage</span>.<span class="title function_">success</span>(<span class="string">&#x27;提交成功&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript">      <span class="title function_">resetForm</span>()</span></span><br><span class="line"><span class="language-javascript">    &#125; <span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="title class_">ElMessage</span>.<span class="title function_">error</span>(<span class="string">&#x27;表单填写错误&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;)</span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">let</span> <span class="title function_">resetForm</span> = (<span class="params"></span>) =&gt; &#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;重置&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript">  form.<span class="property">value</span>.<span class="title function_">resetFields</span>()</span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">let</span> <span class="title function_">handleRemove</span> = (<span class="params">file: any, fileList: any</span>) =&gt; &#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;handleRemove&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript">  <span class="variable language_">console</span>.<span class="title function_">log</span>(file, fileList)</span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">let</span> <span class="title function_">handlePreview</span> = (<span class="params">file: any</span>) =&gt; &#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;handlePreview&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript">  <span class="variable language_">console</span>.<span class="title function_">log</span>(file)</span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">let</span> <span class="title function_">beforeRemove</span> = (<span class="params">val: any</span>) =&gt; &#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;beforeRemove&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">return</span> <span class="title class_">ElMessageBox</span>.<span class="title function_">confirm</span>(<span class="string">`Cancel the transfert of <span class="subst">$&#123;val.file.name&#125;</span> ?`</span>)</span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">let</span> <span class="title function_">handleExceed</span> = (<span class="params">val: any</span>) =&gt; &#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;handleExceed&#x27;</span>, val)</span></span><br><span class="line"><span class="language-javascript">  <span class="title class_">ElMessage</span>.<span class="title function_">warning</span>(</span></span><br><span class="line"><span class="language-javascript">    <span class="string">`The limit is 3, you selected <span class="subst">$&#123;val.files.length&#125;</span> files this time, add up to <span class="subst">$&#123;</span></span></span></span><br><span class="line"><span class="subst"><span class="string"><span class="language-javascript">      val.files.length + val.fileList.length</span></span></span></span><br><span class="line"><span class="subst"><span class="string"><span class="language-javascript">    &#125;</span> totally`</span></span></span><br><span class="line"><span class="language-javascript">  )</span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">let</span> <span class="title function_">handleSuccess</span> = (<span class="params">val: any</span>) =&gt; &#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;success&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript">  <span class="variable language_">console</span>.<span class="title function_">log</span>(val)</span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">let</span> <span class="title function_">handleChange</span> = (<span class="params">val: any</span>) =&gt; &#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;change&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript">  <span class="variable language_">console</span>.<span class="title function_">log</span>(val)</span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">let</span> <span class="title function_">handleBeforeUpload</span> = (<span class="params">val: any</span>) =&gt; &#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;handleBeforeUpload&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript">  <span class="variable language_">console</span>.<span class="title function_">log</span>(val)</span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">lang</span>=<span class="string">&quot;scss&quot;</span> <span class="attr">scoped</span>&gt;</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="参数-1"><a href="#参数-1" class="headerlink" title="参数"></a>参数</h3><ul>
+<li>options：表单配置项，数组类型，每个元素为一个对象，对象内包含该表单项的各种属性，比如type、value、label、prop等。具体来说，options数组中的每个元素（对象）包含以下属性：<ul>
+<li>type：表单项的类型，包括input、select、checkbox-group、radio-group、upload、editor等。</li>
+<li>value：表单项的默认值。</li>
+<li>label：表单项的标签文本。</li>
+<li>prop：表单项的字段名，用于表单提交时识别该项的值。</li>
+<li>rules：表单项的校验规则，可以为一个数组，每个元素是一个对象，包含校验规则的具体内容，如required、min、max等。</li>
+<li>attrs：表单项的其它属性，以对象形式传递。</li>
+<li>on:表单项事件，以对象形式绑定</li>
+</ul>
+</li>
+<li>ref：表单的引用，用于获取表单实例并调用其相应方法。通过ref绑定表单的引用，然后可以在代码中使用例如form.value.resetFields()这样的语法来调用表单实例上的resetFields方法。</li>
+</ul>
+<h3 id="方法-1"><a href="#方法-1" class="headerlink" title="方法"></a>方法</h3><ul>
+<li><p>@on-change：表单值改变时触发的事件，传递的参数为表单中所有输入组件的值。例如，在options数组中某个表单项设置了响应式属性v-model，则该表单项的值发生变化时，会触发@on-change事件，并将表单中所有输入组件的当前值作为参数传递给该事件。</p>
+</li>
+<li><p>@before-upload：点击上传前触发的事件，传递的参数为上传文件的相关信息。例如，在options数组中某个表单项设置了type为upload，则点击上传按钮时，会触发@before-upload事件，并将上传文件的相关信息作为参数传递给该事件。</p>
+</li>
+<li><p>@on-preview：点击预览已上传的文件时触发的事件，传递的参数为被点击的文件对象。例如，在options数组中某个表单项设置了type为upload，并且允许预览已上传的文件，则在上传完成后点击文件列表中某个文件的预览按钮时，会触发@on-preview事件，并将预览文件的对象作为参数传递给该事件。</p>
+</li>
+<li><p>@on-remove：删除已上传的文件时触发的事件，传递的参数为被删除的文件对象以及当前列表中的所有文件。例如，在options数组中某个表单项设置了type为upload，则在上传完成后可以删除已上传的文件，当点击删除按钮时，会触发@on-remove事件，并将被删除的文件对象以及当前列表中的所有文件作为参数传递给该事件。</p>
+</li>
+<li><p>@before-remove：删除已上传的文件前触发的事件，传递的参数为被删除的文件对象。例如，在options数组中某个表单项设置了type为upload，则在上传完成后可以删除已上传的文件，当点击删除按钮时会先触发该事件，若事件返回值为真则继续执行删除操作，否则取消删除。</p>
+</li>
+<li><p>@on-success：文件上传成功后触发的事件，传递的参数为服务器返回的响应数据。例如，在options数组中某个表单项设置了type为upload，上传完成后会触发@on-success事件，并将服务器返回的响应数据作为参数传递给该事件。</p>
+</li>
+<li><p>@on-exceed：超出限制个数或大小时触发的事件，传递的参数为文件信息。例如，在options数组中某个表单项设置了type为upload，且设置了上传文件的最大个数或最大大小，则当上传的文件个数或大小超过限制时，会触发@on-exceed事件，并将文件信息作为参数传递给该事件。</p>
+</li>
+<li><p>validate：验证表单是否通过校验，参数为一个回调函数，该回调函数的参数为布尔类型，表明是否通过校验。例如，在点击提交按钮时，可以调用form.value.validate()方法对表单进行校验，校验通过则执行回调函数中的代码，否则提示用户“表单填写错误”。</p>
+</li>
+<li><p>resetFields: 重置表单，清空所有输入组件的值，并取消校验状态。当点击重置按钮时，可以调用form.value.resetFields()方法来清空表单中所有输入组件的值以及校验状态。</p>
+</li>
+</ul>
+<h3 id="使用逻辑-1"><a href="#使用逻辑-1" class="headerlink" title="使用逻辑"></a>使用逻辑</h3><p>这是一个基于 Element Plus 和 wangeditor 的表单组件，支持各种表单项类型，其中还包含上传和富文本编辑器类型。</p>
+<ol>
+<li>引入组件：在Vue项目中引入该表单组件。</li>
+<li>定义表单项：根据需要，定义要使用的表单项，包括输入框、下拉框、复选框、单选框、上传文件等。</li>
+<li>编写表单模板：在页面中编写表单模板，在模板中使用组件，并将定义好的表单项传递给组件作为参数。同时可以自定义表单项的提示文字和样式。</li>
+<li>编写事件处理函数：根据需求编写表单提交、重置、文件上传等事件处理函数。</li>
+<li>使用表单组件：在Vue实例中，将定义好的表单模板渲染到页面中。</li>
+<li>处理表单数据：在表单数据验证通过后，会调用表单提交事件处理函数，并将表单数据传递给父组件进行处理。</li>
+<li>其他功能：该组件还提供了取消上传、文件预览、文件删除等功能，可以根据需要进行使用。</li>
+</ol>
+<p>总体来说，使用逻辑就是根据需求定义表单项、编写表单模板和事件处理函数，然后通过组件将表单渲染到页面上，最后处理表单数据并完成相应的操作。</p>
+<hr>
+<h2 id="BnoticeBar滚动通知栏组件"><a href="#BnoticeBar滚动通知栏组件" class="headerlink" title="BnoticeBar滚动通知栏组件"></a>BnoticeBar滚动通知栏组件</h2><h3 id="使用方式-3"><a href="#使用方式-3" class="headerlink" title="使用方式"></a>使用方式</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-card</span> <span class="attr">shadow</span>=<span class="string">&quot;hover&quot;</span> <span class="attr">header</span>=<span class="string">&quot;滚动通知栏：默认&quot;</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">NoticeBar</span> <span class="attr">:text</span>=<span class="string">&quot;state.text&quot;</span> /&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">el-card</span>&gt;</span></span><br><span class="line"></span><br><span class="line">   <span class="tag">&lt;<span class="name">el-card</span> <span class="attr">shadow</span>=<span class="string">&quot;hover&quot;</span> <span class="attr">header</span>=<span class="string">&quot;滚动通知栏：设置样式&quot;</span> <span class="attr">class</span>=<span class="string">&quot;mt15&quot;</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">NoticeBar</span></span></span><br><span class="line"><span class="tag">       <span class="attr">:text</span>=<span class="string">&quot;state.text&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">background</span>=<span class="string">&quot;#ecf5ff&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">color</span>=<span class="string">&quot;#409eff&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">leftIcon</span></span></span><br><span class="line"><span class="tag">       <span class="attr">rightIcon</span></span></span><br><span class="line"><span class="tag">     &gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">template</span> <span class="attr">v-slot:leftIcon</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">Bell</span> /&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">template</span> <span class="attr">v-slot:rightIcon</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">ArrowRight</span> /&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">NoticeBar</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">el-card</span>&gt;</span></span><br><span class="line"></span><br><span class="line">   <span class="tag">&lt;<span class="name">el-card</span></span></span><br><span class="line"><span class="tag">     <span class="attr">shadow</span>=<span class="string">&quot;hover&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">header</span>=<span class="string">&quot;滚动通知栏：搭配 NoticeBar 和 Carousel 走马灯 组件可以实现垂直滚动的效果&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">class</span>=<span class="string">&quot;mt15&quot;</span></span></span><br><span class="line"><span class="tag">   &gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">NoticeBar</span> <span class="attr">:scrollable</span>=<span class="string">&quot;true&quot;</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">el-carousel</span></span></span><br><span class="line"><span class="tag">         <span class="attr">height</span>=<span class="string">&quot;40px&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">direction</span>=<span class="string">&quot;vertical&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">:autoplay</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">indicator-position</span>=<span class="string">&quot;none&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">:interval</span>=<span class="string">&quot;3000&quot;</span></span></span><br><span class="line"><span class="tag">       &gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">el-carousel-item</span> <span class="attr">v-for</span>=<span class="string">&quot;v in state.noticeList&quot;</span> <span class="attr">:key</span>=<span class="string">&quot;v&quot;</span></span></span><br><span class="line"><span class="tag">           &gt;</span>&#123;&#123; v &#125;&#125;</span><br><span class="line">         <span class="tag">&lt;/<span class="name">el-carousel-item</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">el-carousel</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">NoticeBar</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">el-card</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="参数-2"><a href="#参数-2" class="headerlink" title="参数"></a>参数</h3><table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">类型</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>mode</code></td>
+<td align="left"><code>string</code></td>
+<td align="left">通知栏模式，用于右侧图标点击，可选值：<code>closeable</code>（可关闭模式）或 <code>link</code>（链接模式）</td>
+</tr>
+<tr>
+<td align="left"><code>text</code></td>
+<td align="left"><code>string</code></td>
+<td align="left">通知文本内容，当 <code>scrollable</code> 属性为 <code>false</code> 时生效</td>
+</tr>
+<tr>
+<td align="left"><code>color</code></td>
+<td align="left"><code>string</code></td>
+<td align="left">通知文本颜色</td>
+</tr>
+<tr>
+<td align="left"><code>background</code></td>
+<td align="left"><code>string</code></td>
+<td align="left">通知背景色</td>
+</tr>
+<tr>
+<td align="left"><code>size</code></td>
+<td align="left"><code>number</code>&#x2F;<code>string</code></td>
+<td align="left">字体大小，单位为像素</td>
+</tr>
+<tr>
+<td align="left"><code>height</code></td>
+<td align="left"><code>number</code>&#x2F;<code>string</code></td>
+<td align="left">通知栏高度，单位为像素</td>
+</tr>
+<tr>
+<td align="left"><code>delay</code></td>
+<td align="left"><code>number</code>&#x2F;<code>string</code></td>
+<td align="left">动画延迟时间，单位为秒，用于滚动模式</td>
+</tr>
+<tr>
+<td align="left"><code>speed</code></td>
+<td align="left"><code>number</code>&#x2F;<code>string</code></td>
+<td align="left">滚动速率，单位为像素每秒，用于滚动模式</td>
+</tr>
+<tr>
+<td align="left"><code>scrollable</code></td>
+<td align="left"><code>boolean</code></td>
+<td align="left">是否开启垂直滚动</td>
+</tr>
+<tr>
+<td align="left"><code>leftIcon</code></td>
+<td align="left"><code>boolean</code></td>
+<td align="left">是否显示自定义左侧图标</td>
+</tr>
+<tr>
+<td align="left"><code>rightIcon</code></td>
+<td align="left"><code>boolean</code></td>
+<td align="left">是否显示自定义右侧图标</td>
+</tr>
+</tbody></table>
+<h3 id="方法-2"><a href="#方法-2" class="headerlink" title="方法"></a>方法</h3><table>
+<thead>
+<tr>
+<th align="left">事件名称</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>close</code></td>
+<td align="left">通知栏模式(<code>mode</code>)为 <code>closeable</code> 时回调事件</td>
+</tr>
+<tr>
+<td align="left"><code>link</code></td>
+<td align="left">通知栏模式(<code>mode</code>)为 <code>link</code> 时回调事件</td>
+</tr>
+</tbody></table>
+<h3 id="使用的逻辑"><a href="#使用的逻辑" class="headerlink" title="使用的逻辑"></a>使用的逻辑</h3><p>该组件实现了一个定制化的滚动通知栏，并提供自定义样式和图标、动画滚动等功能。</p>
+<ol>
+<li>使用reactive函数定义state对象，包含了一些变量和参数的初始值。</li>
+<li>在模板中使用NoticeBar组件，并通过属性绑定设置相应的参数、样式和其他选项。</li>
+<li>使用具名插槽slot和template标签定义左右图标的显示内容。</li>
+<li>搭配Carousel走马灯组件实现垂直滚动效果，展示列表中的数据。</li>
+<li>根据需要对组件进行事件监听和处理，实现交互功能。</li>
+</ol>
+<h3 id="封装的功能-1"><a href="#封装的功能-1" class="headerlink" title="封装的功能"></a>封装的功能</h3><ol>
+<li>自定义背景色、字体颜色、字体大小、高度等样式；</li>
+<li>支持文本滚动和固定文本两种显示方式；</li>
+<li>可以自定义左侧和&#x2F;或右侧图标；</li>
+<li>可以设置通知栏模式（可关闭或可链接），并响应右侧图标点击事件；</li>
+<li>当滚动模式开启时，文本内容可以是多个标签的组合，并且支持自动滚动的动画效果。</li>
+</ol>
+<hr>
+<h2 id="utils方法"><a href="#utils方法" class="headerlink" title="utils方法"></a>utils方法</h2><h3 id="使用方式-4"><a href="#使用方式-4" class="headerlink" title="使用方式"></a>使用方式</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; throttle &#125; <span class="keyword">from</span> <span class="string">&#x27;vue-ami-ui&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="方法列表"><a href="#方法列表" class="headerlink" title="方法列表"></a>方法列表</h3><table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">参数</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>throttle</code></td>
+<td align="left"><code>fn</code>&#x2F;<code>delay</code></td>
+<td align="left">【防抖】：<code>fn</code>（执行函数）, <code>delay</code>（延时时间，单位毫秒）</td>
+</tr>
+<tr>
+<td align="left"><code>debounce</code></td>
+<td align="left"><code>fn</code>&#x2F;<code>delay</code></td>
+<td align="left">【节流】：<code>fn</code>（执行函数）, <code>delay</code>（延时时间，单位毫秒）</td>
+</tr>
+<tr>
+<td align="left"><code>downloadFile</code></td>
+<td align="left"><code>url</code>&#x2F;<code>name</code></td>
+<td align="left">【文件下载】：<code>url</code>(下载地址) , <code>name</code>(文件名) 。 可选值：<code>name</code></td>
+</tr>
+<tr>
+<td align="left"><code>AmiCookie</code></td>
+<td align="left"><code>set</code>&#x2F;<code>get</code>&#x2F;<code>remove</code>&#x2F;<code>clear</code></td>
+<td align="left">【cookie操作对象】：提供方法<code>set</code>&#x2F;<code>get</code>&#x2F;<code>remove</code>&#x2F;<code>clear</code></td>
+</tr>
+<tr>
+<td align="left"><code>randomString</code></td>
+<td align="left"></td>
+<td align="left">【生成随机字符串】</td>
+</tr>
+<tr>
+<td align="left"><code>randomNumber</code></td>
+<td align="left"><code>min</code>&#x2F;<code>max</code></td>
+<td align="left">【生成随机范围内的数字】</td>
+</tr>
+<tr>
+<td align="left"><code>calcAge</code></td>
+<td align="left"><code>birthDate</code></td>
+<td align="left">【计算年龄】</td>
+</tr>
+<tr>
+<td align="left"><code>getQueryObject</code></td>
+<td align="left"><code>url</code></td>
+<td align="left">【提取指定url参数并返回对象】</td>
+</tr>
+<tr>
+<td align="left"><code>moveArrItem</code></td>
+<td align="left"><code>type</code>&#x2F;<code>index</code>&#x2F;<code>arr</code></td>
+<td align="left">【移动数组项】：<code>type</code>0前移1后移，<code>index</code>索引，<code>arr</code>操作的数组</td>
+</tr>
+</tbody></table>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 slxnl@outlook.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2024-2034 qlog.com
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>Help us with donation</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">alipay</label></span><span><label><input type="radio" name="pay" value="weixin">weixin</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
